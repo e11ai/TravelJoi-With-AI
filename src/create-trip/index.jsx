@@ -19,6 +19,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { db } from '@/service/firbaseConfig';
+import { useNavigate} from 'react-router-dom';
 
 function CreateTrip() {
   const [place, setPlace] = useState();
@@ -27,6 +28,7 @@ function CreateTrip() {
   const [openDailog, setOpenDailog] = useState(false);
 
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleInputChange = (name, value) => {
     setFormData({
@@ -83,7 +85,10 @@ function CreateTrip() {
       id: docId
     });
     setLoading(false);
+    navigate('/view-trip/' + docId)
   }
+
+
   const GetUserProfile = (tokenInfo) => {
     axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?acess_token=${tokenInfo?.access_token}`, {
       headers: {

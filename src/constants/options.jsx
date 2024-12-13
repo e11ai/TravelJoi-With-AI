@@ -33,19 +33,19 @@ export const SelectTravelesList = [
 export const SelectBudgetOptions=[
     {
         id:1,
-        title:'Қолжетімді',
+        title:'Cheap',
         desc:'Шығындарды бақылау',
         icon:'💸'
     },
     {
         id:2,
-        title:'Оңтайлы',
+        title:'Moderate',
         desc:'Шығындар орташа деңгейде',
         icon:'💰'
     },
     {
         id:3,
-        title:'Вип саяхат',
+        title:'Luxury',
         desc:'Шығындар туралы алаңдамаңыз',
         icon:'💎'
     }
