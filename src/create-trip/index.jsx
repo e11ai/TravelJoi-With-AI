@@ -103,7 +103,7 @@ function CreateTrip() {
     })
   }
   return (
-    <div className='sm:px-10 md:px-32 lg:px56 xl:px-10 px-5 mt-10'>
+    <div className='sm:px-10 md:px-32 lg:px56 xl:px-72 px-5 mt-10'>
       <h2 className='font-bold text-3xl'>
         Саяхат армандарыңызбен бізбен бөлісіңіз🚢🧳✈️
       </h2>
@@ -126,7 +126,7 @@ function CreateTrip() {
       </div>
       <div>
         <h2 className='text-xl my-3 font-medium'>Сапарыңызды неше күнге жоспарлап отырсыз?</h2>
-        <Input placeholder={'Example: 3'} type="number"
+        <Input placeholder={'Мысалы: 3'} type="number"
           onChange={(e) => handleInputChange('noOfDays', e.target.value)}
         />
       </div>
@@ -175,19 +175,19 @@ function CreateTrip() {
       </div>
       <Dialog open={openDailog}>
         <DialogContent>
-          <DialogTitle>Sign</DialogTitle>
+          <DialogTitle>Кіру</DialogTitle>
           <DialogHeader>
             <DialogDescription>
-              <img src="src/assets/logo.svg" />
-              <h2 className='font-bold text-lg mt-7'>Sign in With Google</h2>
-              <div>Sign in to the App with Google authentication security</div>
+              <img src="/logo.svg" />
+              <h2 className='font-bold text-lg mt-7'>Google аккаунтпен кіру</h2>
+              <div>Google аутентификация қауіпсіздігі арқылы платформаға кіріңіз</div>
 
               <Button
                 disabled={loading}
                 onClick={login} 
                 className="w-full mt-5 flex gap-4 items-center">
                 <FcGoogle className='h-7 w-7' />
-                Sign In With Google
+                Google аккаунтпен кіру
               </Button>
             </DialogDescription>
           </DialogHeader>
